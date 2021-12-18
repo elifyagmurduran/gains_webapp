@@ -25,4 +25,4 @@ A web based exercise guidance app with bad ghost puns, to make it spooky.
   
   *Zeynep Çolak – Server Side*
   
-  *Süleyman Çetin -  Server Side*
+  *Süleyman Çetin -  Client Side*

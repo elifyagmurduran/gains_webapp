@@ -6,7 +6,7 @@ VALUES  (0, 'Kol'),
 	(4, 'Sırt');
 
 INSERT INTO Kas (ID, KasAdı)
-VALUES  (1, 'Shoulders), 
+VALUES  (1, 'Shoulders'), 
 	(2, 'Biceps'),
 	(3, 'Triceps'),
 	(4, 'Forearms'),

@@ -1,6 +1,6 @@
-# exorcise_webapp
+# gains_webapp
 
-A web based exercise guidance app with bad ghost puns, to make it spooky.
+A web based exercise guidance app. This is our teams first learning experience for a web bases app development.
 
 # Modules Planned
 
@@ -15,14 +15,14 @@ A web based exercise guidance app with bad ghost puns, to make it spooky.
 
 # Work Distribution
 
-  *Emre Ömer Uncuoğlu – Database and Server Side*
+  *Emre Ömer Uncuoğlu – Server Side + Database*
   
-  *Şimal Ekiz - Database and Server Side*
+  *Zeynep Çolak – Server Side*
+  
+  *Şimal Ekiz - Database*
   
   *Yağmur Duran – Client Side*
   
   *Talha Bacak – Client Side*
   
-  *Zeynep Çolak – Server Side*
   
-  *Süleyman Çetin -  Client Side*

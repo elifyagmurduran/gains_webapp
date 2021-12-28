@@ -25,4 +25,8 @@ A web based exercise guidance app. This is our teams first learning experience f
   
   *Talha Bacak – Client Side*
   
-  
+# Required Tools
+
+- node.js
+- MySQL
+- Workbench 

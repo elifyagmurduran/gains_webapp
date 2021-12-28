@@ -267,14 +267,11 @@
   </script>
 
 
-  <script>
+  <script>/*
     let muscle = [
-      {
-        name: "biceps",
-      },
-      {
-        name: "triceps",
-      }
+
+      { "1": "Shoulders", "2": "Biceps", "3": "Triceps", "4": "Forearms", "5": "Chest", "6": "Abdominals", "7": "Traps", "8": "Lats", "9": "LowerBack", "10": "Glutes", "11": "Quads", "12": "Calves", "13": "Hamstrings" }
+
     ];
 
 
@@ -291,8 +288,30 @@
     }
 
   //  });
+*/
+  </script>
+
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "/kas";
+
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var muscle = JSON.parse(this.responseText);
+        let selectMuscle = document.getElementById("muscleselect");
+        console.log(muscle.length);
+        for (let i = 0; i < muscle.length; i++) {
+          let newSelect = document.createElement("option");
+          newSelect.text = muscle[i].name;
+          selectMuscle.add(newSelect);
+        }
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 
   </script>
+
 
   <script>
     let user = [

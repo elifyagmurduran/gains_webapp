@@ -285,10 +285,10 @@
     <script>
         let category = [
             {
-                categoryname: "Bacak",
+                name: "Bacak",
             },
             {
-                categoryname: "Kol",
+                name: "Kol",
             }
         ];
 
@@ -329,10 +329,10 @@
         //  console.log(json);
 
         let selectName = document.getElementById("nameselect");
-        console.log(name.length);
-        for (let i = 0; i < name.length; i++) {
+        console.log(excercise.length);
+        for (let i = 0; i < excercise.length; i++) {
             let newSelect = document.createElement("option");
-            newSelect.text = name[i].name;
+            newSelect.text = excercise[i].name;
             selectName.add(newSelect);
             console.log(i);
         }

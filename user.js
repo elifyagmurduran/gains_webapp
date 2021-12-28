@@ -47,10 +47,6 @@ router.post('/login', function(request, response) {
 		response.send('Please enter Username and Password!');
 		response.end();
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> parent of 2083f03 (Response Func Update)
 });
 
 

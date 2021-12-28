@@ -27,6 +27,8 @@ router.use(bodyParser.json());
 router.post('/login', function(request, response) {
 	var username = request.body.username;
 	var password = request.body.password;
+	console.log(username)
+	console.log(password)
 	if (username && password) {
 		connection.query('SELECT * FROM Kullanıcı WHERE Kullanıcıadı = ? AND şifre = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
@@ -34,7 +36,7 @@ router.post('/login', function(request, response) {
 				request.session.username = username;
 				
                 response.send('Correct');
-				response.redirect('/index.html');
+				//response.redirect('/index.html');
                 //response.redirect(***)  //anasayfaya yönlendir
 			} else {
 				response.send('Incorrect Username and/or Password!');
@@ -77,15 +79,33 @@ router.get('/kas', function(request, response) {
 	
 	connection.query('SELECT KasAdı from Kas ', function(error, results, fields) {
 		if (results.length > 0) {
+			//response.setHeader('Content-Type', 'application/json');
+
+
 			console.log(results);
 			
-			const responseData ={}
-			var len = results.length;
-			for (var i = 0; i < len; i++)
-				responseData[i+1]=results[i].KasAdı;
+			const points = [];
 			
+			var len = results.length;
+			for (var i = 0; i < len; i++){
+				const responseData ={}
+				responseData["name"]=results[i].KasAdı;
+				points.push(responseData)
+			}
+			console.log(points)
+			///////
+/*
+			const points = [];
+			for (var i = 0; i < len; i++)
+				var responseData1 ={}
+				responseData1[0]={ name: ""}
+				console.log(responseData1)
+				responseData1["name"]=results[i].KasAdı;
+				points.push(responseData1)
 
-			const jsonContent = JSON.stringify(responseData);  //string//object
+			console.log(points)*/
+
+			const jsonContent = JSON.stringify(points);  //string//object
 			console.log(typeof(jsonContent))
 			console.log(typeof(responseData))
   			response.end(jsonContent);

@@ -48,7 +48,7 @@ router.post('/login', function(request, response) {
 });
 
 
-router.post('/signin', function(request, response) {
+router.post('/register', function(request, response) {
 	
     var username = request.body.username;
 	var password = request.body.password;

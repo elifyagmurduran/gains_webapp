@@ -58,7 +58,7 @@ router.post('/signin', function(request, response) {
 			console.log(results)
 			if (results.length > 0) {
                 
-                response.send('Kullanıcı eklenemedi '+ results);
+                response.send('Kullanıcı eklenemedi');
 			} else {
 				response.send('Kullanıcı eklendi');
 			}			
@@ -117,7 +117,7 @@ router.post('/settings', function(request, response)
 	});
 });
 
-
+/*
 router.get('/kategori', function(request, response) {
 	
 	connection.query('SELECT KategoriAdı from kategori ', function(error, results, fields) {
@@ -140,14 +140,15 @@ router.get('/kategori', function(request, response) {
 	});
 	//response.end();
 });
+*/
 
 router.post('/search', function(request, response) {
 	var search = request.body.search;
 	var kasid =request.body.kasID;
-	var katid =request.body.kategoriID;
+	//var katid =request.body.kategoriID;
 
 	//console.log(typeof(search))
-	var sql="select * from hareket where hareketadı like '%"+search+"%'  and (Kas1="+kasid+" or Kas2="+kasid+" or Kas3="+kasid+")and KategoriID="+katid
+	var sql="select * from hareket where hareketadı like '%"+search+"%'  and (Kas1="+kasid+" or Kas2="+kasid+" or Kas3="+kasid+")"
 	console.log(sql)
 	connection.query(sql, function(error, results, fields) {
 		console.log(results);
@@ -155,8 +156,7 @@ router.post('/search', function(request, response) {
 			//console.log(results);
 			console.log(typeof(results));
 			//response.send('results dolu');
-			
-			  
+	
 			const jsonContent = JSON.stringify(results);  //string//object
 			console.log(typeof(jsonContent))
   			response.end(jsonContent);

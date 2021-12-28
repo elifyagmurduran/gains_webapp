@@ -49,3 +49,5 @@ INSERT INTO Kullanıcı (ID, ProfilFoto, KullanıcıAdı, Şifre, Yaş, Kilo, Bo
 VALUES  (1, 'photo', 'gonna_lose_weight', 'Hxf8RGghuqwCaHnE', '34', '84.5', '1.72', 1, 2, NULL, NULL),   
 	(2, 'photo', 'princess', '45N9YJgYD6aHMy9a', '24', '54.3', '1.60', 1, 2, NULL, NULL),
 	(3, 'photo', 'King813', 'nnnyVQYtWzSpr2va', '28', '72.4', '1.83', 1, 2, NULL, NULL);
+
+ALTER TABLE kullanıcı AUTO_INCREMENT 4;

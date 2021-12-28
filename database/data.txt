@@ -5,7 +5,7 @@ VALUES  (0, 'Kol'),
 	(3, 'Göğüs'),
 	(4, 'Sırt');
 
-ALTER TABLE Kategori AUTO_INCREMENT 5;
+
 
 INSERT INTO Kas (ID, KasAdı)
 VALUES  (1, 'Shoulders'), 
@@ -22,7 +22,7 @@ VALUES  (1, 'Shoulders'),
 	(12, 'Calves'),
 	(13, 'Hamstrings');
 
-ALTER TABLE Kas AUTO_INCREMENT 14;
+
 
 INSERT INTO Hareket (ID, HareketAdı, Thumbnail, Açıklama, Kas1, Kas2, Kas3, KategoriID, Süre)
 VALUES  (1, 'Seated Dumbbell Shoulder Press', 'thumbnail', 'Sit on an upright bench holding a dumbbell in each hand at shoulder height with your palms facing away from you. Keep your chest up and your core braced, and look straight forward throughout the move. Press the weights directly upwards until your arms are straight and the weights touch above your head.', 1, 3, 7, 0, 15),
@@ -41,23 +41,22 @@ VALUES  (1, 'Seated Dumbbell Shoulder Press', 'thumbnail', 'Sit on an upright be
 	(14, 'Pull Ups', 'thumbnail', 'Grasp the bar with an overhand grip, arms and shoulders fully extended. Pull your body up until your chin is above the bar. Lower your body back to starting position.', 8, 5, 2, 4, 15),
 	(15, 'Barbell Hip Thrust', 'thumbnail', 'Lean back so your shoulders are on the bench and position the bar above your hips. Drive your hips up lifting the bar. In the top position your knees should be bent at 90° and your shoulders should be near the top of the bench, with your body forming a straight line between them. Pause at the top of the lift and squeeze your glutes, then lower your hips slowly.', 10, 13, NULL, 1, 10);
 
-ALTER TABLE Hareket AUTO_INCREMENT 16;
+
 
 INSERT INTO Rutin (ID, RutinAdı, Hareket1, Hareket2, Hareket3, Hareket4, Hareket5, Hareket6, Hareket7, Hareket8)
 VALUES  (1,'Default', 3, 4, 9, 2, 11, 8, 14, 1), 
 	(2,'Easy', 1, 4, 8, 7, 9, 14, 2, 3);
 
-ALTER TABLE Rutin AUTO_INCREMENT 3;
+
 
 INSERT INTO Yetkili (ID, KullanıcıAdı, Şifre)
 VALUES  (1, 'admin', '5g8WCqkSGTuVufju'),
 	(2, 'secondary', 'fYH5L6Vmz276kEbH');
 
-ALTER TABLE Yetkili AUTO_INCREMENT 3;
+
 
 INSERT INTO Kullanıcı (ID, ProfilFoto, KullanıcıAdı, Şifre, Yaş, Kilo, Boy, Favori1, Favori2, Favori3, Calendar)
 VALUES  (1, 'photo', 'gonna_lose_weight', 'Hxf8RGghuqwCaHnE', '34', '84.5', '1.72', 1, 2, NULL, NULL),   
 	(2, 'photo', 'princess', '45N9YJgYD6aHMy9a', '24', '54.3', '1.60', 1, 2, NULL, NULL),
 	(3, 'photo', 'King813', 'nnnyVQYtWzSpr2va', '28', '72.4', '1.83', 1, 2, NULL, NULL);
 
-ALTER TABLE kullanıcı AUTO_INCREMENT 4;

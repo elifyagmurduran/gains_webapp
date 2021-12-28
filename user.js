@@ -32,8 +32,9 @@ router.post('/login', function(request, response) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
 				request.session.username = username;
-				//response.redirect('/home');
-                response.send('correct Username and/or Password!');
+				
+                response.send('Correct');
+				response.redirect('/index.html');
                 //response.redirect(***)  //anasayfaya yönlendir
 			} else {
 				response.send('Incorrect Username and/or Password!');
@@ -46,23 +47,19 @@ router.post('/login', function(request, response) {
 	}
 });
 
-var id =5;
 
 router.post('/signin', function(request, response) {
-	var profil = request.body.profil;
+	
     var username = request.body.username;
 	var password = request.body.password;
-	var yas = request.body.yas;
-    var kilo = request.body.kilo;
-    var boy = request.body.boy;
 
 	if (username && password) {
-		connection.query("INSERT INTO Kullanıcı (ID, ProfilFoto, KullanıcıAdı, Şifre, Yaş, Kilo, Boy, Favori1, Favori2, Favori3, Calendar) VALUES  (?,? ,? ,? ,? ,? ,? , 1, 2, NULL, NULL)", [id,profil,username, password,yas,kilo,boy], function(error, results, fields) {
+		connection.query("INSERT INTO Kullanıcı ( KullanıcıAdı, Şifre) VALUES  (? ,?)", [username, password], function(error, results, fields) {
+			console.log(results)
 			if (results.length > 0) {
                 
                 response.send('Kullanıcı eklenemedi '+ results);
 			} else {
-                id=id+1;
 				response.send('Kullanıcı eklendi');
 			}			
 			response.end();

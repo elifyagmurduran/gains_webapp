@@ -39,12 +39,13 @@ router.post('/login', function(request, response) {
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}			
-			response.end();
+			
 		});
 	} else {
 		response.send('Please enter Username and Password!');
-		response.end();
+		
 	}
+	response.end();
 });
 
 
@@ -62,12 +63,13 @@ router.post('/register', function(request, response) {
 			} else {
 				response.send('Kullanıcı eklendi');
 			}			
-			response.end();
+			
 		});
 	} else {
 		response.send('Please enter Username and Password!');
-		response.end();
+		
 	}
+	response.end();
 });
 
 
@@ -91,7 +93,7 @@ router.get('/kas', function(request, response) {
 		} else {
 			response.send('results boş');
 		}			
-		
+		response.end();
 	});
 	//response.end();
 });
@@ -114,6 +116,7 @@ router.post('/settings', function(request, response)
 		{
 			response.send('Güncellenemedi');
 		}
+		response.end();
 	});
 });
 
@@ -164,7 +167,7 @@ router.post('/search', function(request, response) {
 		} else {
 			response.send('bu seçeneklere uyan bir hareket yok');
 		}			
-		
+		response.end();
 	});
 	//response.end();
 });

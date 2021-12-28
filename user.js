@@ -99,6 +99,27 @@ router.get('/kas', function(request, response) {
 	//response.end();
 });
 
+router.post('/settings', function(request, response) 
+{
+	var username = request.body.username;	
+	var yas = request.body.yas;
+    var kilo = request.body.kilo;
+    var boy = request.body.boy;
+
+	connection.query('UPDATE Kullanıcı SET Yaş= ?, Kilo= ?, Boy= ?  WHERE KullanıcıAdı= ?',[yas,kilo,boy,username], function(error, results, fields)
+	{
+		if (results.length > 0)
+		{
+			console.log(results);
+			response.send('Güncellendi');
+		}
+		else 
+		{
+			response.send('Güncellenemedi');
+		}
+	});
+});
+
 
 router.get('/kategori', function(request, response) {
 	

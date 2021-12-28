@@ -39,13 +39,13 @@ router.post('/login', function(request, response) {
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}			
-			
+			response.end();
 		});
 	} else {
 		response.send('Please enter Username and Password!');
-		
+		response.end();
 	}
-	response.end();
+	
 });
 
 

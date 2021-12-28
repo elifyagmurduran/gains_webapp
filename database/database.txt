@@ -1,17 +1,17 @@
 CREATE TABLE Kategori (
-  ID INT NOT NULL,
+  ID INT NOT NULL AUTO_INCREMENT,
   KategoriAdı TEXT,
   PRIMARY KEY (ID)
 ); 
 
 CREATE TABLE Kas (
-  ID INT NOT NULL,
+  ID INT NOT NULL AUTO_INCREMENT,
   KasAdı TEXT,
   PRIMARY KEY (ID)
 );
 
 CREATE TABLE Hareket (
-  ID INT NOT NULL,
+  ID INT NOT NULL AUTO_INCREMENT,
   HareketAdı TEXT,
   Thumbnail TEXT,
   Açıklama TEXT,
@@ -28,7 +28,7 @@ CREATE TABLE Hareket (
 );
 
 CREATE TABLE Rutin (
-  ID INT NOT NULL,
+  ID INT NOT NULL AUTO_INCREMENT,
   RutinAdı TEXT,
   Hareket1 INT,
   Hareket2 INT,
@@ -50,14 +50,14 @@ CREATE TABLE Rutin (
 ); 
 
 CREATE TABLE Yetkili (
-  ID INT NOT NULL,
+  ID INT NOT NULL AUTO_INCREMENT,
   KullanıcıAdı TEXT,
   Şifre TEXT,
   PRIMARY KEY (ID)
 );
 
 CREATE TABLE Kullanıcı (
-  ID INT NOT NULL,
+  ID INT NOT NULL AUTO_INCREMENT,
   ProfilFoto TEXT,
   KullanıcıAdı TEXT,
   Şifre TEXT,

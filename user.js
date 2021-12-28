@@ -163,8 +163,7 @@ router.post('/search', function(request, response) {
 			
 		} else {
 			response.send('bu seçeneklere uyan bir hareket yok');
-		}			
-		
+		}				
 	});
 	//response.end();
 });

@@ -14,7 +14,25 @@ var connection = mysql.createConnection({
 	database : 'gains'
 });
 
+router.post('/editpage', function(request, response)
+{
+	var id = request.body.id;
+	var hareketAdı = request.body.hareketAdı;
+	var süre = request.body.süre;
 
+	connection.query('UPDATE Hareket SET Süre= ?  WHERE ID= ? OR HareketAdı= ?',[süre,id,hareketAdı], function(error, results, fields)
+	{
+		if (results.length > 0)
+		{
+			console.log(results);
+			response.send('Güncellendi');
+		}
+		else 
+		{
+			response.send('Güncellenemedi');
+		}
+	});
+});
 
 
 

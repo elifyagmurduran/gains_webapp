@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="images/icon.png" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
+            <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="css/green.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html" id="username"></a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+
+                        <a class="nav-link" href="exinfo.html">
+                            <div class="sb-nav-link-icon"></div>
+                            Exercise Info
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Workouts</div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"></div>
+                            Saveds
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="savedone.html">Workout Routine 1</a>
+                                <a class="nav-link" href="savedtwo.html">Workout Routine 2</a>
+                      </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"></div>
+                            Favorites
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="favoritedone.html" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                    aria-controls="pagesCollapseAuth">
+                                    Workout Routine 1
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+
+                                <a class="nav-link collapsed" href="favoritedtwo.html" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Workout Routine 2
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Other</div>
+                        <a class="nav-link" href="calendarlog.html">
+                            <div class="sb-nav-link-icon"></div>
+                            Calendar / Log
+                        </a>
+                        <a class="nav-link" href="newworkout.html">
+                            <div class="sb-nav-link-icon"></div>
+                            Add a New Workout
+                        </a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <!-- top tiles -->
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>User Details <small>Reset or Edit Informations</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <br />
+                                    <form class="form-label-left input_mask">
+
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-md-3 col-sm-3">User Name</label>
+                                            <div class="col-md-9 col-sm-9 " id="username3">
+
+
+                                            </div>
+                                        </div>
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-3 col-sm-3">Age</label>
+                                    <div class="col-md-9 col-sm-9 " id="age">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-3 col-sm-3 ">Height </label>
+                                    <div class="col-md-9 col-sm-9 " id="height">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-3 col-sm-3 ">Weight</label>
+                                    <div class="col-md-9 col-sm-9 " id="weight">
+
+                                    </div>
+                                </div>
+                                <div>
+                                </br>
+
+                                </div>
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group row">
+                                    <div class="col-md-9 col-sm-9  offset-md-3">
+                                        <button type="button" class="btn btn-primary">Cancel</button>
+                                        <a>
+                                            <button class="btn btn-primary" type="btn btn-primary"
+                                                href="myprofile.html">Reset</button>
+                                        </a>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- jQuery -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/dist/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="lib/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="lib/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="lib/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="lib/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="lib/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="lib/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="lib/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="lib/Flot/jquery.flot.js"></script>
+    <script src="lib/Flot/jquery.flot.pie.js"></script>
+    <script src="lib/Flot/jquery.flot.time.js"></script>
+    <script src="lib/Flot/jquery.flot.stack.js"></script>
+    <script src="lib/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="lib/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="lib/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="lib/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="lib/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="lib/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="lib/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="lib/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="js/custom.min.js"></script>
+
+    <script>
+        let user = [
+            {
+                name: "TalhaBacak",
+                password: "1234",
+                weight: 75,
+                age: 24,
+                height: 175,
+            }
+        ];
+
+
+        //fetch('').then(response => response.json()).then(json => {
+        //  let user = json;
+        //  console.log(json);
+
+        let username = document.getElementById("username");
+        let username3 = document.getElementById("username3");
+        let age = document.getElementById("age");
+        let weight = document.getElementById("weight");
+        let height = document.getElementById("height");
+
+        username.innerHTML = user[0].name;
+        username3.innerHTML = '<input type="text" class="form-control has-feedback-left" placeholder="User Name" readonly="readonly" value="' + user[0].name + '">'
+        age.innerHTML = '<input type="text" class="form-control" placeholder="Age" value="' + user[0].age + '">';
+        weight.innerHTML = '<input type="text" class="form-control" placeholder="Height" value="' + user[0].weight + '">';
+        height.innerHTML = ' <input type="text" class="form-control" placeholder="Weight"value="' + user[0].height + '">';
+
+
+  //  });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "gains_webapp",
+  "version": "1.0.0",
+  "description": "A web based exercise guidance app. This is our teams first learning experience for a web bases app development.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elifyagmurduran/gains_webapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elifyagmurduran/gains_webapp/issues"
+  },
+  "homepage": "https://github.com/elifyagmurduran/gains_webapp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
+  }
+}

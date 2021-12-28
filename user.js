@@ -170,6 +170,21 @@ router.post('/search', function(request, response) {
 });
 
 
+router.post('/newworkout', function(request, response) {
+	var muscle = request.body.muscle;
+    var name = request.body.name;
+
+	connection.query("INSERT INTO Rutin (Rutin, Hareket1) VALUES  (? ,?)", [name, muscle], function(error, results, fields) {
+	console.log(results)
+	if (results.length > 0) {
+                
+         response.send('Rutin eklenemedi');
+	} else {
+		response.send('Rutin eklendi');
+	}			
+		response.end();
+	});
+});
 
 
 

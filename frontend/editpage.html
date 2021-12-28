@@ -13,7 +13,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
-            <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     <link href="jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
     <link href="lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -67,59 +67,40 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-
-                        <a class="nav-link" href="exinfo.html">
-                            <div class="sb-nav-link-icon"></div>
-                            Exercise Info
-                        </a>
-                        <div class="sb-sidenav-menu-heading">Workouts</div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon"></div>
-                            Saveds
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="savedone.html">Workout Routine 1</a>
-                                <a class="nav-link" href="savedtwo.html">Workout Routine 2</a>
-                            </nav>
+                        <div class="menu_section">
+                            <a class="nav-link" href="index.html"><i class="fa fa-home"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Home
+                            </a>
+                            <a class="nav-link" href="exinfo.html"><i class="fa fa-info-circle"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Exercise Info
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Workouts</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapseLayouts" aria-expanded="false"
+                                aria-controls="collapseLayouts"><i class="fa fa-bookmark-o"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Saveds
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="savedone.html">Workout Routine 1</a>
+                                    <a class="nav-link" href="savedtwo.html">Workout Routine 2</a>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Other</div>
+                            <a class="nav-link" href="calendarlog.html"><i class="fa fa-calendar"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Calendar / Log
+                            </a>
+                            <a class="nav-link" href="newworkout.html"><i class="fa fa-plus-square"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Add a New Workout
+                            </a>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-                            aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"></div>
-                            Favorites
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="favoritedone.html" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-                                    aria-controls="pagesCollapseAuth">
-                                    Workout Routine 1
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-
-                                <a class="nav-link collapsed" href="favoritedtwo.html" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
-                                    aria-controls="pagesCollapseError">
-                                    Workout Routine 2
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-
-                            </nav>
-                        </div>
-                        <div class="sb-sidenav-menu-heading">Other</div>
-                        <a class="nav-link" href="calendarlog.html">
-                            <div class="sb-nav-link-icon"></div>
-                            Calendar / Log
-                        </a>
-                        <a class="nav-link" href="newworkout.html">
-                            <div class="sb-nav-link-icon"></div>
-                            Add a New Workout
-                        </a>
                     </div>
                 </div>
 
@@ -270,7 +251,7 @@
         let username2 = document.getElementById("navbarDropdown");
 
         username.innerHTML = user[0].name;
-    
+
           //  });
 
     </script>

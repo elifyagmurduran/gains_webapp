@@ -69,59 +69,40 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-
-                        <a class="nav-link" href="exinfo.html">
-                            <div class="sb-nav-link-icon"></div>
-                            Exercise Info
-                        </a>
-                        <div class="sb-sidenav-menu-heading">Workouts</div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon"></div>
-                            Saveds
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="savedone.html">Workout Routine 1</a>
-                                <a class="nav-link" href="savedtwo.html">Workout Routine 2</a>
-                               </nav>
+                        <div class="menu_section">
+                            <a class="nav-link" href="index.html"><i class="fa fa-home"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Home
+                            </a>
+                            <a class="nav-link" href="exinfo.html"><i class="fa fa-info-circle"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Exercise Info
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Workouts</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#collapseLayouts" aria-expanded="false"
+                                aria-controls="collapseLayouts"><i class="fa fa-bookmark-o"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Saveds
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="savedone.html">Workout Routine 1</a>
+                                    <a class="nav-link" href="savedtwo.html">Workout Routine 2</a>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Other</div>
+                            <a class="nav-link" href="calendarlog.html"><i class="fa fa-calendar"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Calendar / Log
+                            </a>
+                            <a class="nav-link" href="newworkout.html"><i class="fa fa-plus-square"></i>
+                                <div class="sb-nav-link-icon"></div>
+                                Add a New Workout
+                            </a>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-                            aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"></div>
-                            Favorites
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="favoritedone.html" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-                                    aria-controls="pagesCollapseAuth">
-                                    Workout Routine 1
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-
-                                <a class="nav-link collapsed" href="favoritedtwo.html" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
-                                    aria-controls="pagesCollapseError">
-                                    Workout Routine 2
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-
-                            </nav>
-                        </div>
-                        <div class="sb-sidenav-menu-heading">Other</div>
-                        <a class="nav-link" href="calendarlog.html">
-                            <div class="sb-nav-link-icon"></div>
-                            Calendar / Log
-                        </a>
-                        <a class="nav-link" href="newworkout.html">
-                            <div class="sb-nav-link-icon"></div>
-                            Add a New Workout
-                        </a>
                     </div>
                 </div>
 
@@ -144,27 +125,37 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-
-                                <table class="table table-striped table-responsive-xl">
-                                    <thead>
-                                        <tr>
-                                            <th>Excercise Category</th>
-                                            <th>Excercise Name</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <select class="form-control" id="categoryselect">
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select class="form-control" id="nameselect">
-                                                </select>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="col-md-12 col-sm-12">
+                                    <select class="form-control"
+                                        style="background-color: rgb(128, 128, 128); color: #000;">
+                                        <option style="color:rgb(75, 65, 65)" value="null">Select To Saved Location
+                                        </option>
+                                        <option value="1">Saved List One</option>
+                                        <option value="2">Saved List Two</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row" style="padding: 15px;">
+                                    <table class="table table-striped table-responsive-xl">
+                                        <thead>
+                                            <tr>
+                                                <th>Excercise Muscle</th>
+                                                <th>Excercise Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-control" id="muscleselect">
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-control" id="nameselect">
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <div class="ln_solid"></div>
                             </div>
 
@@ -250,13 +241,13 @@
         let username2 = document.getElementById("navbarDropdown");
 
         username.innerHTML = user[0].name;
-      
+
           //  });
 
     </script>
 
     <script>
-        let category = [
+        let muscle = [
             {
                 name: "Bacak",
             },
@@ -269,12 +260,12 @@
         //  let category = json;
         //  console.log(json);
 
-        let selectCategory = document.getElementById("categoryselect");
-        console.log(category.length);
-        for (let i = 0; i < category.length; i++) {
+        let selectMuscle = document.getElementById("muscleselect");
+        console.log(muscle.length);
+        for (let i = 0; i < muscle.length; i++) {
             let newSelect = document.createElement("option");
-            newSelect.text = category[i].name;
-            selectCategory.add(newSelect);
+            newSelect.text = muscle[i].name;
+            selectMuscle.add(newSelect);
             console.log(i);
         }
 

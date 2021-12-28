@@ -1,0 +1,60 @@
+CREATE TABLE Kategori (
+  ID INT NOT NULL AUTO_INCREMENT,
+  KategoriAdı TEXT,
+  PRIMARY KEY (ID)
+); 
+
+CREATE TABLE Kas (
+  ID INT NOT NULL AUTO_INCREMENT,
+  KasAdı TEXT,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Hareket (
+  ID INT NOT NULL AUTO_INCREMENT,
+  HareketAdı TEXT,
+  Thumbnail TEXT,
+  Açıklama TEXT,
+  Kas1 INT,
+  Kas2 INT,
+  Kas3 INT,
+  KategoriID INT,
+  Süre INT,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Rutin (
+  ID INT NOT NULL AUTO_INCREMENT,
+  RutinAdı TEXT,
+  Hareket1 INT,
+  Hareket2 INT,
+  Hareket3 INT,
+  Hareket4 INT,
+  Hareket5 INT,
+  Hareket6 INT,
+  Hareket7 INT,
+  Hareket8 INT,
+  PRIMARY KEY (ID)
+); 
+
+CREATE TABLE Yetkili (
+  ID INT NOT NULL AUTO_INCREMENT,
+  KullanıcıAdı TEXT,
+  Şifre TEXT,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Kullanıcı (
+  ID INT NOT NULL AUTO_INCREMENT,
+  ProfilFoto TEXT,
+  KullanıcıAdı TEXT,
+  Şifre TEXT,
+  Yaş INT,
+  Kilo DECIMAL,
+  Boy DECIMAL,
+  Favori1 INT,
+  Favori2 INT,
+  Favori3 INT,
+  Calendar INT,
+  PRIMARY KEY (ID)
+);

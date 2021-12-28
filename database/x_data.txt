@@ -1,0 +1,62 @@
+INSERT INTO Kategori (ID, KategoriAdı)
+VALUES  (1, 'Kol'),
+	(2, 'Bacak'),
+	(3, 'Karın'),
+	(4, 'Göğüs'),
+	(5, 'Sırt');
+
+
+
+INSERT INTO Kas (ID, KasAdı)
+VALUES  (1, 'Shoulders'), 
+	(2, 'Biceps'),
+	(3, 'Triceps'),
+	(4, 'Forearms'),
+	(5, 'Chest'),
+	(6, 'Abdominals'),
+	(7, 'Traps'),
+	(8, 'Lats'),
+	(9, 'LowerBack'),
+	(10, 'Glutes'),
+	(11, 'Quads'),
+	(12, 'Calves'),
+	(13, 'Hamstrings');
+
+
+
+INSERT INTO Hareket (ID, HareketAdı, Thumbnail, Açıklama, Kas1, Kas2, Kas3, KategoriID, Süre)
+VALUES  (1, 'Seated Dumbbell Shoulder Press', 'thumbnail', 'Sit on an upright bench holding a dumbbell in each hand at shoulder height with your palms facing away from you. Keep your chest up and your core braced, and look straight forward throughout the move. Press the weights directly upwards until your arms are straight and the weights touch above your head.', 1, 3, 7, 0, 15),
+	(2, 'Side Lateral Raises', 'thumbnail', 'The side lateral raise is an effective shoulder-strengthening movement designed to isolate the lateral head of the deltoid muscle. Performed regularly, this can help you develop stronger, broader shoulders. All you need is a pair of light dumbbells and enough shoulder flexibility to abduct your arms (lifting the weights out and away from your body) until they form a "T" shape at your shoulders.', 1, NULL, NULL, 0, 15),
+	(3, 'Barbell Curl', 'thumbnail', 'Stand tall with your chest up and core braced, holding the barbell with your hands just outside of your hips, using an underhand grip. Keeping your chest up and your elbows tight to your sides, initiate the move by raising your hands slightly so you feel your biceps become engaged. While maintaining tension on your biceps, curl the bar up to shoulder height, then give your biceps a one-second squeeze. Start to lower the bar slowly, keeping your biceps tensed and engaged to work as many muscle fibres as possible.', 2, NULL, NULL, 0, 10),
+	(4, 'Wrist Curl', 'thumbnail', 'Curl your wrists upward as you exhale. Perform this movement slowly to engage the forearms and prevent the weights from straining your wrists. Extend your wrists downward as far as they will comfortably go on an inhale. Return the wrists to a neutral position.', 4, NULL, NULL, 0, 15),
+	(5, 'Dips', 'thumbnail', 'To perform a dip, the exerciser supports themselves on a dip bar or from a set of rings with their arms straight down and shoulders over their hands, then lowers their body until their arms are bent to a 90 degree angle at the elbows, and then lifts their body up, returning to the starting position.', 3, 5, NULL, 0, 10),
+	(6, 'Barbell Bench Press', 'thumbnail', 'The person performing the exercise lies on their back on a bench with a barbell grasped in both hands. They lower the barbell to chest level, then press the barbell upwards, extending the arms until the elbows are locked out.', 5, 3, NULL, 3, 10),
+	(7, 'Crunches', 'thumbnail', 'An approved crunch begins with you lying down, one knee bent, and hands positioned beneath your lower back for support. Do not hollow your stomach or press your back against the floor. Gently lift your head and shoulders, hold briefly and relax back down', 6, NULL, NULL, 2, 25),
+	(8, 'Leg Raises', 'thumbnail', 'Press the low back into the ground. Engage your core and lift your legs until they form a 90-degree angle with your body. Slowly lower them back down until they are hovering over the ground', 6, 11, NULL, 2, 30),
+	(9, 'Squat', 'thumbnail', 'Stand with feet slightly wider than hip-width apart, with toes slightly turned outward. Tighten up your core to stabilize yourself, then with your chest thrust upward, start to shift your weight back into your heels while pushing your hips behind you as you squat down. Continue to lower yourself until your thighs are almost parallel to the floor. Your feet should remain flat on the ground, and your knees should remain over your second toe. Keep your chest lifted and your feet on the floor, and exhale as you push yourself back up to standing.', 11, 13, 10, 1, 25),
+	(10, 'Barbell Curtsy Lunge', 'thumbnail', 'Stand with your feet hip-width apart, hands on your hips. Take a big step back with your right leg, crossing it behind your left. Bend your knees and lower your hips until your left thigh is nearly parallel to the floor. Keep your torso upright and your hips and shoulders as square as possible to the wall in front of you.', 11, 13, 10, 1, 20),
+	(11, 'Seated Calf Raises', 'thumbnail', 'Get comfortable on the machine, then place your lower thighs beneath the padded lever. Place your toes and the balls of your feet onto the foot supports. Prevent the weight from slipping forward by gripping the handles, and release the safety bar. Lower the weight until your calves are extended. Push your heels up to lift the padded lever and hold the contracted position, then slowly lower back down to the starting position.', 12, NULL, NULL, 1, 30),
+	(12, 'Deadlift', 'thumbnail', 'Lift the bar by driving your hips forwards, keeping a flat back. Lower the bar under control – though once you get up to really heavy weights, it’s OK to drop it on your final rep.', 9, 10, 11, 4, 15),
+	(13, 'Kettlebell Swing', 'thumbnail', 'Start with the kettlebell on the floor slightly in front of you and between your feet, which should be shoulder-width apart. Bending slightly at the knees but hingeing mainly at the hips, grasp the kettlebell and pull it back between your legs to create momentum. Drive your hips forwards and straighten your back to send the kettlebell up to shoulder height. Let the bell return back between your legs and repeat the move.', 9, 10, 13, 4, 30),
+	(14, 'Pull Ups', 'thumbnail', 'Grasp the bar with an overhand grip, arms and shoulders fully extended. Pull your body up until your chin is above the bar. Lower your body back to starting position.', 8, 5, 2, 4, 15),
+	(15, 'Barbell Hip Thrust', 'thumbnail', 'Lean back so your shoulders are on the bench and position the bar above your hips. Drive your hips up lifting the bar. In the top position your knees should be bent at 90° and your shoulders should be near the top of the bench, with your body forming a straight line between them. Pause at the top of the lift and squeeze your glutes, then lower your hips slowly.', 10, 13, NULL, 1, 10);
+
+
+
+INSERT INTO Rutin (ID, RutinAdı, Hareket1, Hareket2, Hareket3, Hareket4, Hareket5, Hareket6, Hareket7, Hareket8)
+VALUES  (1,'Default', 3, 4, 9, 2, 11, 8, 14, 1), 
+	(2,'Easy', 1, 4, 8, 7, 9, 14, 2, 3);
+
+
+
+INSERT INTO Yetkili (ID, KullanıcıAdı, Şifre)
+VALUES  (1, 'admin', '5g8WCqkSGTuVufju'),
+	(2, 'secondary', 'fYH5L6Vmz276kEbH');
+
+
+
+INSERT INTO Kullanıcı (ID, ProfilFoto, KullanıcıAdı, Şifre, Yaş, Kilo, Boy, Favori1, Favori2, Favori3, Calendar)
+VALUES  (1, 'photo', 'gonna_lose_weight', 'Hxf8RGghuqwCaHnE', '34', '84.5', '1.72', 1, 2, NULL, NULL),   
+	(2, 'photo', 'princess', '45N9YJgYD6aHMy9a', '24', '54.3', '1.60', 1, 2, NULL, NULL),
+	(3, 'photo', 'King813', 'nnnyVQYtWzSpr2va', '28', '72.4', '1.83', 1, 2, NULL, NULL);
+

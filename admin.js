@@ -14,6 +14,29 @@ var connection = mysql.createConnection({
 	database : 'gains'
 });
 
+router.post('/adminlogin', function(request, response) {
+	var username = request.body.username;
+	var password = request.body.password;
+	if (username && password) {
+		connection.query('SELECT * FROM Yetkili WHERE Kullanıcıadı = ? AND şifre = ?', [username, password], function(error, results, fields) {
+			if (results.length > 0) {
+				request.session.loggedin = true;
+				request.session.username = username;
+				
+                response.send('Correct');
+				response.redirect('/index.html');
+                //response.redirect(***)  //anasayfaya yönlendir
+			} else {
+				response.send('Incorrect Username and/or Password!');
+			}			
+			response.end();
+		});
+	} else {
+		response.send('Please enter Username and Password!');
+		response.end();
+	}
+});
+
 router.post('/editpage', function(request, response)
 {
 	var id = request.body.id;

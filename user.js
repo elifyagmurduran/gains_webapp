@@ -39,12 +39,13 @@ router.post('/login', function(request, response) {
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}			
-			response.end();
+			
 		});
 	} else {
 		response.send('Please enter Username and Password!');
-		response.end();
+		
 	}
+	response.end();
 });
 
 
@@ -62,12 +63,13 @@ router.post('/register', function(request, response) {
 			} else {
 				response.send('Kullanıcı eklendi');
 			}			
-			response.end();
+			
 		});
 	} else {
 		response.send('Please enter Username and Password!');
-		response.end();
+		
 	}
+	response.end();
 });
 
 
@@ -91,7 +93,7 @@ router.get('/kas', function(request, response) {
 		} else {
 			response.send('results boş');
 		}			
-		
+		response.end();
 	});
 	//response.end();
 });
@@ -114,6 +116,7 @@ router.post('/settings', function(request, response)
 		{
 			response.send('Güncellenemedi');
 		}
+		response.end();
 	});
 });
 
@@ -163,12 +166,28 @@ router.post('/search', function(request, response) {
 			
 		} else {
 			response.send('bu seçeneklere uyan bir hareket yok');
-		}				
+		}			
+		response.end();
 	});
 	//response.end();
 });
 
 
+router.post('/newworkout', function(request, response) {
+	var muscle = request.body.muscle;
+    var name = request.body.name;
+
+	connection.query("INSERT INTO Rutin (Rutin, Hareket1) VALUES  (? ,?)", [name, muscle], function(error, results, fields) {
+	console.log(results)
+	if (results.length > 0) {
+                
+         response.send('Rutin eklenemedi');
+	} else {
+		response.send('Rutin eklendi');
+	}			
+		response.end();
+	});
+});
 
 
 

@@ -39,12 +39,11 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="images/icon.png" alt="..."
-                class="img-circle profile_img">
+              <img src="images/icon.png" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
-              <h2>KULLANICI ADI LABEL İLE</h2>
+              <h2 id="username"></h2>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -126,8 +125,6 @@
               <li class="nav-item dropdown open" style="padding-left: 15px;">
                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown"
                   data-toggle="dropdown" aria-expanded="false">
-                  <img src="images/icon.png" alt="">KULLANICI ADI
-                  LABEL
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="myprofile.html"> My Profile</a>
@@ -142,7 +139,7 @@
       </div>
 
       <!-- top navigation -->
-     
+
       <!-- /top navigation -->
 
       <!-- page content -->
@@ -292,6 +289,32 @@
 
   <!-- Custom Theme Scripts -->
   <script src="js/custom.min.js"></script>
+
+  <script>
+    let user = [
+      {
+        name: "TalhaBacak",
+        password: "1234",
+        weight: 75,
+        age: 24,
+        height: 175,
+      }
+    ];
+
+
+    //fetch('').then(response => response.json()).then(json => {
+    //  let user = json;
+    //  console.log(json);
+
+    let username = document.getElementById("username");
+    let username2 = document.getElementById("navbarDropdown");
+
+    username.innerHTML = user[0].name;
+    username2.innerHTML = '<img id="username2" src="images/icon.png" alt="">' + user[0].name;
+
+  //  });
+
+  </script>
 
 </body>
 

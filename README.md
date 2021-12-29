@@ -1,6 +1,6 @@
 # gains_webapp
 
-A web based exercise guidance app. This is our teams first learning experience for a web bases app development.
+A web based exercise guidance app. This is our teams first learning experience for a web based app development.
 
 # Modules Planned
 
@@ -25,8 +25,7 @@ A web based exercise guidance app. This is our teams first learning experience f
   
   *Talha Bacak – Client Side*
   
-# Required Tools
+# Final Update
 
-- node.js
-- MySQL
-- Workbench 
+Since this has been our first learning experience we have failed out attempt to integrate the frontend and backend to work the modules we planned, by the time our deadline had arrived.
+We hope to do better in future projects. Please do check out the github pages of our collaborators.
